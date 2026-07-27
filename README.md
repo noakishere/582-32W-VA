@@ -261,27 +261,11 @@ Topics:
 - identification of the primary workflow
 - initial task planning
 
-### Tuesday lecture - July 28th 2026
+### Tuesday - July 28th 2026
 
-#### From Client Quote to Buildable Project
+Lecture on design and project management.
 
-Topics:
-
-- extracting requirements from a quote
-- functional versus non-functional requirements
-- must-have versus optional features
-- identifying assumptions
-- defining acceptance criteria
-- selecting a realistic minimum viable product
-- avoiding scope creep
-- defining one complete vertical workflow
-
-Drop-in focus (optional):
-
-- project discussion
-- scope review
-- feature reduction
-- technology-track decision
+Drop-in
 
 ### Wednesday - July 29th 2026
 
@@ -318,8 +302,6 @@ Students individually present:
 Studio work
 
 ### Tuesday - August 4th 2026
-
-To be confirmed.
 
 Drop-in hours
 
