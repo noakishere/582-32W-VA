@@ -579,3 +579,4 @@ Real secrets, api-keys, and passwords must not be committed.
 # 14. References
 
 - [awwwwards](https://www.awwwards.com/)
+- [Design Systems](https://www.figma.com/blog/design-systems-101-what-is-a-design-system/#_2-component-and-pattern-libraries)
