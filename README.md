@@ -578,4 +578,4 @@ Real secrets, api-keys, and passwords must not be committed.
 
 # 14. References
 
-To be completed..
+- [awwwwards](https://www.awwwards.com/)
