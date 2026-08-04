@@ -39,3 +39,12 @@ Backend responsibilities:
 #### Relationship:
 
 Browser --> Flask --> Database
+
+---
+
+### HTTP Status codes:
+
+- 200 -- Successful request
+- 201 -- Resource created
+- 400 -- Invalid client input
+- 401 -- client side erorr, input cant be processed (related to creation)
