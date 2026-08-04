@@ -56,3 +56,63 @@ async function loadEquipment() {
 loadEquipment();
 
 // loadEquipment() --> getEquipment() --> fetch("/api/equipment") --> Flask endpoint --> Database query --> turns into JSON --> renderEquipment()
+
+async function createEquipment(equipment) {
+  const response = await fetch("/api/equipment", {
+    method: "POST", // request to create data
+
+    headers: {
+      // we're telling Flask the body of our request contains JSON
+      "Content-Type": "application/json",
+    },
+
+    body: JSON.stringify(equipment), // converting JS object into JSON text.
+  });
+
+  const data = await response.json();
+
+  if (!response.ok) {
+    const error = new Error("Equipment could not be created.");
+
+    error.details = data;
+
+    throw error;
+  }
+
+  return data;
+}
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  // get the user's input from our form
+  const formData = new FormData(form);
+
+  // create JS object
+  const equipment = {
+    name: formData.get("name"),
+    category: formData.get("category"),
+  };
+
+  statusOutput.textContent = "Adding equipment...";
+
+  try {
+    await createEquipment(equipment);
+
+    form.reset();
+
+    statusOutput.textContent = "Equipment added.";
+
+    await loadEquipment();
+  } catch (error) {
+    console.log(error);
+
+    const errors = error.details?.errors;
+
+    if (errors) {
+      statusOutput.textContent = Object.values(errors).join(" ");
+    } else {
+      statusOutput.textContent = "Unable to add equipment!";
+    }
+  }
+});

@@ -35,7 +35,7 @@ def get_equipment():
 
 
 # Submit JSON to Flask
-@app.route("api/equipment", methods=["GET", "POST"])
+@app.route("/api/equipment", methods=["GET", "POST"])
 def equipment_collection():
     if request.method == "POST":
         data = request.get_json()
