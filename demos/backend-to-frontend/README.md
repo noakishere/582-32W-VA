@@ -1,0 +1,41 @@
+# Workflow
+
+Browser loads HTML from Flask (template)
+
+↓
+
+Javascript calls (endpoint)
+
+↓
+
+Flask queries the database
+
+↓
+
+Flask returns JSON
+
+↓
+
+Javascript renders the list
+
+Frontend responsibilities:
+
+- interface
+- events
+- loading states
+- displaying validation errors, feedbacks, etc.
+- rendering returned data
+
+Backend responsibilities:
+
+- validation
+- database operations
+- authentication
+- authorization
+- JSON responses
+
+---
+
+#### Relationship:
+
+Browser --> Flask --> Database
